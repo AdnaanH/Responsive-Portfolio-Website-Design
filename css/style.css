@@ -1,0 +1,344 @@
+:root{
+    --Font-Oswald: 'Oswald', sans-serif;
+    --Font-Segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --Font-Fjalla: 'Fjalla One', sans-serif;
+    --Font-Gill: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --Font-Bitter: 'Bitter', serif;
+    --Font-Commissioner: 'Commissioner', sans-serif;
+    --Font-Space-Mono: 'Space Mono', monospace;
+    --Color-Green: rgb(0, 128, 0);
+    --Color-White: #fff;
+    --Color-Black: #000;
+    --Color-Red: rgb(255, 0, 0);
+    --Color-Yellow: rgb(255, 255, 0);
+    --Color-Grey-Blue: #6699CC;
+}
+.dark_mode_on{
+    --Color-Grey-Blue: #000;
+    --Color-White: #fff;
+    --Color-Black: #fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Color-Grey-Blue);
+  width: 100%;
+}
+.mob_mn{
+  display: none;
+  transition: .2s ease-in;
+}
+#close{
+  display: none;
+}
+.main_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30px 50px;
+}
+/* HEADER STYLING */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  display: flex;
+  align-items: start;
+}
+.logo a{
+  font-size: 27px;
+  text-decoration: none;
+  font-family: var(--Font-Oswald);
+  color: var(--Color-Black);
+  font-weight: 500;
+}
+.logo a span{
+  color: var(--Color-Green);
+  font-weight: 700;
+}
+.logo img{
+  position: relative;
+  top: 15px;
+  left: -2px;
+  width: 28px;
+}
+.dark_mode{
+  width: 60px;
+  border: 2px solid var(--Color-Black);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.dark_mode i{
+  color: var(--Color-White);
+  font-size: 13px;
+  cursor: pointer;
+}
+.dark_mode i:hover{
+  padding: 3px;
+  border: 2px solid var(--Color-White);
+  border-radius: 50%;
+}
+.mode_active{
+  padding: 2px;
+  border: 2px solid var(--Color-Black);
+  border-radius: 50%;
+}
+.phone_number{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone_number i{
+  font-size: 27px;
+  padding-right: 15px;
+}
+.phone_number a{
+  font-size: 30px;
+  font-family: var(--Font-Fjalla);
+  text-decoration: none;
+  color: var(--Color-Black);
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 75vh;
+}
+aside{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+}
+aside a{
+  padding: 5px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: var(--Font-Gill);
+  font-weight: 700;
+  color: var(--Color-Green);
+  text-transform: uppercase;transition: .2s ease-in-out;
+}
+aside a:hover{
+  background-color: transparent;
+  border-bottom: 2px solid var(--Color-White);
+  border-radius: 10px;
+}
+aside a i{
+  color: var(--Color-Black);
+  padding-right: 5px;
+}
+.active{
+  background-color: transparent;
+  border-bottom: 2px solid var(--Color-Black);
+  box-shadow: 1px solid var(--Color-Black);
+}
+section{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+}
+section p{
+  text-align: center;
+  font-size: 40px;
+  font-family: var(--Font-Commissioner);
+  font-weight: 600;
+  color: var(--Color-Black);
+}
+section p span{
+  font-size: 56px;
+  font-family: var(--Font-Bitter);
+  font-weight: 600;
+  color: var(--Color-Yellow);
+}
+.technologies{
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 0 100px;
+  justify-content: space-between;
+}
+.technologies img{
+  transition: .1s ease-out;
+  cursor: pointer;
+}
+.technologies img:hover{
+  scale: 1.7;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social{
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.social i{
+  font-size: 30px;
+}
+.social i:hover{
+  scale: 1.8;
+  color: var(--Color-Green);
+}
+footer a{
+  text-decoration: none;
+  color: var(--Color-Black);
+  font-family: var(--Font-Bitter);
+  font-size: 20px;
+  font-weight: 600;
+}
+footer a:hover{
+  color: var(--Color-Green);
+}
+/* PORTFOLIO DESIGN STYLING */
+
+/* RESPONSIVE DESIGN STYLING FOR TAB SIZED DEVICES */
+@media screen and (max-width: 850px) {
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  aside{
+    position: absolute;
+    background-color: var(--Color-Black);
+    opacity: 0.9;
+    padding: 10px 7px;
+    border-radius: 7px;
+    top: 40px;
+    left: 10px;
+    width: 35%;
+    display: none;
+    transition: .2s ease-out;
+  }
+  aside a{
+    color: var(--Color-Grey-Blue);
+  }
+  aside a i{
+    color: var(--Color-Grey-Blue);
+  }
+  .active{
+    border: none;
+    background-color: var(--Color-Green);
+  }
+  .mob_mn{
+    display: grid;
+  }
+  .mob_mn i{
+    color: var(--Color-White);
+    font-size: 50px;
+    position: absolute;
+    font-size: 30px;
+    top: 5px;
+    left: 10px;
+    cursor: pointer;
+    transition: .2s ease-in;
+  }
+  section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .technologies{
+    width: 100%;
+    padding: 0;
+  }
+  .social{
+    width: 30%;
+  }
+}
+/* RESPONSIVE DESIGN FOR SMARTPHONES STYLING */
+@media screen and (max-width: 390px) {
+  .main_container{
+    padding: 5px 15px;
+    margin: 0;
+  }
+  .wrapper{
+    min-height: 60vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .logo{
+    margin-top: 25px;
+  }
+  .logo a{
+    font-size: 36px;
+  }
+  .logo img{
+    padding-top: 20px;
+  }
+  .dark_mode{
+    position: absolute;
+    top: 5px;
+    left: 50px;
+  }
+  .phone_number{
+    padding-top: 15px;
+  }
+  .phone_number a{
+    font-size: 30px;
+  }
+  .phone_number i{
+    display: none;
+  }
+  aside{
+    padding: 0;
+    width: 50%;
+    top: 45px;
+  }
+  aside a{
+    font-size: 20px;
+  }
+  section{
+    padding: 0 15px;
+    gap: 30px;
+  }
+  section p{
+    width: 90%;
+    text-align: left;
+    font-size: 30px;
+  }
+  section p span{
+    font-size: 36px;
+  }
+  .technologies{
+    display: flex;
+    width: 90%;
+    padding: 0;
+  }
+  .technologies img{
+    width: 80%;
+  }
+  .social{
+    width: 60%;
+  }
+}
